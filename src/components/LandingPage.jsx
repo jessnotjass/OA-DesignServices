@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { Parallax, ParallaxLayer } from '@react-spring/parallax' 
+import logo from '/OALogo.png'
 
 const style = {
   display: 'flex',
@@ -8,13 +9,6 @@ const style = {
   pointerEvents: 'none',
   backgroundColor: '#F5F5DC'
 }
-
-const url = (name, wrap = false) =>
-  `${
-    wrap ? 'url(' : ''
-  }${import.meta.env.BASE_URL}/src/assets/${name}.png${
-    wrap ? ')' : ''
-  }`
 
 export default function App() {
   const parallax = useRef(null)
@@ -27,7 +21,7 @@ export default function App() {
           style={style}
         >
           <div style={{width: '80%', margin: 'auto'}}>
-            <img src={url('OALogo')} style={{ width: '25%', display: 'block'}} />
+            <img src={logo} style={{ width: '25%', display: 'block'}} />
             <div>
               <h1>welcome to design services!</h1>
             </div>
