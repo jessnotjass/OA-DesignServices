@@ -9,11 +9,10 @@ const style = {
   backgroundColor: '#F5F5DC'
 }
 
-
 const url = (name, wrap = false) =>
   `${
     wrap ? 'url(' : ''
-  }./src/assets/${name}.png${
+  }${import.meta.env.BASE_URL}/src/assets/${name}.png${
     wrap ? ')' : ''
   }`
 
